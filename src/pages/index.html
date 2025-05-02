@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Makes the loading of google fonts non-render blocking -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DT207G-Moment 4</title>
+  </head>
+  <body>
+    <div class="body-content-container">
+      <header>
+        <nav>
+          <ul>
+            <li><a href=".">Login</a></li>
+            <li><a href="register/">Register</a></li>
+            <li><a href="profile/">Profile</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="login-page">
+        <h1>Login</h1>
+        <form>
+          <div class="input-box">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="input-box">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </main>
+    </div>
+    <script type="module">
+      import "@ts/login/main.ts";
+    </script>
+    <script
+      src="https://kit.fontawesome.com/2f4373d7bc.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

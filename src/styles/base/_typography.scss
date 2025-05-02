@@ -1,0 +1,20 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+body {
+  font-family: "Source Code Pro", monospace, sans-serif;
+  font-size: v.$regular-font;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-size: v.$regular-font;
+}
+
+input,
+textarea,
+button {
+  font-family: "Source Code Pro", monospace, sans-serif;
+  font-size: v.$regular-font;
+}

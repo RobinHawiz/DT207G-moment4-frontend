@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as v;
+
+body {
+  color: v.$light;
+  background-color: v.$dark;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a,
+button {
+  color: v.$light;
+  text-decoration: none;
+  &:hover {
+    color: v.$dark;
+    background-color: v.$light;
+  }
+}
+
+.error {
+  background-color: rgba(255, 51, 51, 0.9);
+  color: v.$dark;
+}
+
+header {
+  nav {
+    border-top: dashed 0.1rem v.$line-color;
+    border-bottom: dashed 0.1rem v.$line-color;
+  }
+}
+
+:not(nav) > ul {
+  margin-bottom: 1.5rem;
+  list-style: none;
+  li::before {
+    content: "-";
+  }
+}
+
+#homepage {
+  .work-experience-container {
+    article {
+      border-bottom: dashed 0.1rem v.$line-color;
+    }
+    button.edit,
+    button.delete {
+      &.loading {
+        cursor: default;
+        &:hover {
+          background: inherit;
+          border: inherit;
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+#add-page,
+#edit-page {
+  form {
+    input,
+    textarea {
+      background-color: v.$dark;
+      color: v.$light;
+      border: solid 0.1rem v.$line-color;
+    }
+    button[type="submit"] {
+      background: none;
+      border: none;
+      color: v.$light;
+      cursor: pointer;
+      &:hover {
+        background-color: v.$light;
+        color: v.$dark;
+      }
+      &.loading {
+        cursor: default;
+        &:hover {
+          background: inherit;
+          border: inherit;
+          color: inherit;
+        }
+      }
+    }
+  }
+}

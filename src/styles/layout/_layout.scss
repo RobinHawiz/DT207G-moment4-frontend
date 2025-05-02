@@ -1,0 +1,92 @@
+@use "../abstracts/mixins" as m;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+h1,
+h2 {
+  margin-top: 2.2rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.error {
+  padding: 0.5rem;
+}
+
+.body-content-container {
+  width: 90%;
+  max-width: 125rem;
+  margin: auto;
+}
+
+#homepage {
+  .work-experience-container {
+    margin-bottom: 2.2rem;
+    article {
+      position: relative;
+    }
+    .button-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    button:nth-child(1) {
+      margin-right: 1rem;
+    }
+    button.edit,
+    button.delete {
+      svg {
+        display: none;
+        margin-right: 0.5rem;
+      }
+      &.loading {
+        svg {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+form {
+  width: 90%;
+  max-width: 30rem;
+  margin-top: 2.2rem;
+  margin-bottom: 1.5rem;
+  .input-box {
+    @include m.flex(normal, normal, column);
+    margin-bottom: 1rem;
+  }
+  label {
+    margin-bottom: 0.5rem;
+  }
+  input,
+  textarea {
+    padding: 0.5rem;
+  }
+  button[type="submit"] {
+    svg {
+      display: none;
+      margin-right: 0.5rem;
+    }
+    &.loading {
+      svg {
+        display: inline;
+      }
+    }
+  }
+}

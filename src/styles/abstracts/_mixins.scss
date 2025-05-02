@@ -1,0 +1,16 @@
+@use "./variables" as v;
+@use "sass:map";
+
+@mixin flex($align, $justify, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin media-query($key) {
+  $size: map.get(v.$breakpoints, $key);
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}

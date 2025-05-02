@@ -1,0 +1,22 @@
+{
+  "name": "dt207g-moment4",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "rimraf dist && tsc && vite build",
+    "start": "vite preview",
+    "dev": "vite",
+    "clean": "rimraf dist",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "gh-pages": "^6.3.0",
+    "rimraf": "^6.0.1",
+    "sass": "^1.86.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0",
+    "vite-plugin-checker": "^0.9.1"
+  }
+}
